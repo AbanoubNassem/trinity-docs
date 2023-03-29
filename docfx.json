@@ -65,6 +65,8 @@
     "globalMetadata": {
       "_appTitle": "Trinity",
       "_appFooter": "Trinity Copyright © 2022 - 2023",
+      "_appLogoPath": "images/logo.svg",
+      "_appFaviconPath": "images/favicon.ico",
       "rootNamespace": "Trinity",
       "watchFolders": [
         "src",
