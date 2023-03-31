@@ -1,2 +1,11 @@
 - name: Installation
   href: installation.md
+
+- name: Database Connection
+  href: database-connection.md
+  
+- name: Authentication
+  href: authentication.md
+  
+- name: Resources
+  href: ./resources/toc.yml

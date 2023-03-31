@@ -4,16 +4,18 @@
       "src": [
         {
           "files": [
-            "src/**.csproj"
+            "src/**.csproj",
+            "src/**.xml"
           ]
         }
       ],
       "dest": "api",
+      "shouldSkipMarkup": true,
       "includePrivateMembers": false,
       "disableGitFeatures": false,
       "disableDefaultFilter": false,
       "noRestore": false,
-      "namespaceLayout": "flattened"
+      "namespaceLayout": "nested"
     }
   ],
   "build": {
@@ -60,13 +62,14 @@
     "fileMetadataFiles": [],
     "template": [
       "default",
-      "templates/SingulinkFX/singulinkfx"
+      "modern"
     ],
     "globalMetadata": {
       "_appTitle": "Trinity",
       "_appFooter": "Trinity Copyright © 2022 - 2023",
-      "_appLogoPath": "images/logo.svg",
-      "_appFaviconPath": "images/favicon.ico",
+      "_appLogoPath": "./images/logo.png",
+      "_appFaviconPath": "./images/favicon.ico",
+      "_enableSearch": true,
       "rootNamespace": "Trinity",
       "watchFolders": [
         "src",
@@ -78,7 +81,7 @@
     "sitemap": {
       "baseUrl": "https://trinity.abanoubnassem.com/docs",
       "priority": 0.1,
-      "changefreq": "monthly"
+      "changefreq": "weekly"
     },
     "postProcessors": [],
     "noLangKeyword": false,

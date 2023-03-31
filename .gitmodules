@@ -1,6 +1,0 @@
-[submodule "templates/SingulinkFX"]
-	path = templates/SingulinkFX
-	url = https://github.com/Singulink/SingulinkFX.git
-[submodule "src/Trinity"]
-	path = src/Trinity
-	url = https://github.com/AbanoubNassem/Trinity.git
