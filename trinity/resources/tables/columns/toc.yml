@@ -1,2 +1,5 @@
+- name: Getting Started
+  href: getting-started.md
+  
 - name: Text column
   href: text-column.md

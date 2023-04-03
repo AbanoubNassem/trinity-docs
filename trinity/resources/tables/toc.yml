@@ -3,3 +3,4 @@
   
 - name: Columns
   href: ./columns/toc.yml
+  homepage: ./columns/getting-started.md
