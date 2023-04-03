@@ -7,5 +7,5 @@
 
 Here are some additional resources that can help you understand Trinity:
 
-- [Getting Started Guide](../trinity-admin-panel/installation.md)
+- [Getting Started Guide](../trinity/installation.md)
 - [Support](https://github.com/AbanoubNassem/Trinity/issues)

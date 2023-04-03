@@ -1,5 +1,7 @@
-
-## Database Connection
+---
+title: Database Connection
+---
+# Database Connection
 
 `Trinity` uses [Dapper](https://github.com/DapperLib/Dapper) for manging database connections, and [SQLKata](https://github.com/sqlkata/querybuilder) for handling queries,
 therefore `Trinity` is Database agnostic, you can use it with any database provider supported by `Dapper` and `SQLKata`. 

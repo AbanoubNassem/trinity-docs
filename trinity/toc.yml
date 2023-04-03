@@ -7,5 +7,9 @@
 - name: Authentication
   href: authentication.md
   
+- name: Branding
+  href: branding.md
+  
 - name: Resources
   href: ./resources/toc.yml
+  expanded: true

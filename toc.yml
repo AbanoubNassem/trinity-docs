@@ -1,9 +1,9 @@
 - name: Trinity Admin Panel
-  href: trinity-admin-panel/
-- name: Trinity Table
-  href: trinity-table/
-- name: Trinity Form
-  href: trinity-form/
+  href: ./trinity/toc.yml
+  expanded: true
+  homepage: index.md
+
 - name: Api Documentation
   href: api/
-  homepage: api/index.md
+  homepage: api/AbanoubNassem.Trinity.Attributes.yml
+  expanded: true

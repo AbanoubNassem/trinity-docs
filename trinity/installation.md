@@ -1,4 +1,6 @@
-
+---
+title: Installation
+---
 ## Requirements
 
 Trinity requires .Net-Core 6+ to run.

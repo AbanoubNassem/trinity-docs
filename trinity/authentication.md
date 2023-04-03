@@ -1,5 +1,7 @@
-
-## Authentication
+---
+title: Authentication
+---
+# Authentication
 
 Since `Trinity` is database agnostic , and doesn't follow a specific implementation for `Authentaction`,
 the authentication has to be done manually based on your project implementation.
@@ -14,6 +16,7 @@ builder.Services
         configs.AuthenticateUser = (httpContext, email, password) =>
             Task.FromResult(
                 new TrinityUser(
+                    "123456", //identifier
                     "Abanoub", //name
                     email, // email
                     email == "admin@admin.com" ? "admin" : "user", // role
@@ -41,6 +44,7 @@ builder.Services
         
           return  Task.FromResult(
                 new TrinityUser(
+                    user.Id, //identifier
                     user.Name, //name
                     user.Email, // email
                     user.Role.Name, // role

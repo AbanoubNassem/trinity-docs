@@ -10,7 +10,6 @@
         }
       ],
       "dest": "api",
-      "shouldSkipMarkup": true,
       "includePrivateMembers": false,
       "disableGitFeatures": false,
       "disableDefaultFilter": false,
@@ -28,8 +27,8 @@
       },
       {
         "files": [
-          "trinity-admin-panel/**.md",
-          "trinity-admin-panel/**/toc.yml",
+          "trinity/**.md",
+          "trinity/**/toc.yml",
           "trinity-table/**.md",
           "trinity-table/**/toc.yml",
           "trinity-form/**.md",
@@ -64,18 +63,23 @@
       "default",
       "modern"
     ],
+    "cleanupCacheHistory": true,
     "globalMetadata": {
       "_appTitle": "Trinity",
       "_appFooter": "Trinity Copyright © 2022 - 2023",
       "_appLogoPath": "./images/logo.png",
       "_appFaviconPath": "./images/favicon.ico",
       "_enableSearch": true,
-      "rootNamespace": "Trinity",
-      "watchFolders": [
-        "src",
-        "trinity_admin_panel",
-        "trinity_form",
-        "trinity_table"
+      "rootNamespace": "Trinity"
+    },
+    "watch": {
+      "files": [
+        "**/*.md",
+        "**/*.cs"
+      ],
+      "exclude": [
+        "**/bin/**",
+        "**/obj/**"
       ]
     },
     "sitemap": {
