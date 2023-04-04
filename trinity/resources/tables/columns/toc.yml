@@ -1,5 +1,26 @@
 - name: Getting Started
   href: getting-started.md
   
+- name: AggregateColumn
+  href: aggregate-column.md
+
+- name: BadgeColumn
+  href: badge-column.md
+  
+- name: BelongsToColumn
+  href: belongs-to-column.md
+  
+- name: ColorColumn
+  href: color-column.md
+  
+- name: IconColumn
+  href: icon-column.md
+  
+- name: IdColumn
+  href: id-column.md
+  
+- name: ImageColumn
+  href: image-column.md
+  
 - name: Text column
   href: text-column.md
