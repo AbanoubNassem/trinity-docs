@@ -38,7 +38,7 @@ new IconColumn("is_featured")
     .SetAsBoolean()
 ```
 
-### Customizing the boolean icons and colors
+## Customizing the boolean icons and colors
 
 You may customize the icon representing each state. By default, [PrimeIcons](https://primereact.org/icons/#list) are installed:
 
@@ -49,7 +49,7 @@ new IconColumn("is_featured")
 ```
 
 
-### Customizing the boolean values
+## Customizing the boolean values
 
 You may customize what value is true and what value is false. 
 

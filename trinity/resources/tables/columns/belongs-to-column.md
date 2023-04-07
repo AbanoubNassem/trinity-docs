@@ -6,7 +6,7 @@ title: Belongs To column
 
 you can use the simple constructor:
 ```csharp
-new BelongsToField(
+new BelongsToColumn(
         columnName: "language_id", 
         foreignColumnToSelect: "name", 
         foreignTable: "language"
@@ -18,7 +18,7 @@ In this example, `Trinity` will assume that the foreign column is `language_id`,
 more controlled example:
 
 ```csharp
-new BelongsToField(
+new BelongsToColumn(
         localColumnName: "language_id",
         relationTable: "language",
         foreignColumnName: "language_id",

@@ -64,7 +64,7 @@ new TextColumn("title")
     )
 ```
 
-### Searching individually
+## Searching individually
 
 You can choose to enable a per-column search input using the `isIndividuallySearchable` parameter:
 
@@ -87,7 +87,7 @@ new TextColumn("title")
     )
 ```
 
-### Opening URLs
+## Opening URLs
 
 To open a URL, you may use the `SetAsUrl()` method, passing a callback to open. Callbacks accept a `record` parameter which you may use to customize the URL:
 
@@ -124,7 +124,7 @@ new TextColumn("first_name")
     .SetAsHidden(!User.IsTrinityAdmin()),
 ```
 
-### Toggling column visibility
+## Toggling column visibility
 
 Users may hide or show columns themselves in the table. To make a column toggleable, use the `SetAsToggleable()` method:
 
