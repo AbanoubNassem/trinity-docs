@@ -6,7 +6,7 @@ title: TextColumn
 Text columns display simple text from your database:
 
 ```csharp
-new TextField(columnName: "first_name"),
+Make<TextField>(columnName: "first_name"),
 ```
 
 ## Displaying a description
@@ -16,13 +16,13 @@ Descriptions may be used to easily render additional text above or below the col
 You can display a description below the contents of a text column using the `SetDescription()` method:
 
 ```csharp
-new TextColumn("first_name")
+Make<TextColumn>("first_name")
     .SetDescription(record => $"{record["first_name"]} has a description"),
 ```
 
 By default, the description is displayed below the main text, but you can move it above using the second parameter:
 ```csharp
-new TextColumn("first_name")
+Make<TextColumn>("first_name")
     .SetDescription(record => $"{record["first_name"]} has a description", DescriptionPositionTypes.Above),
 ```
 
@@ -32,14 +32,14 @@ new TextColumn("first_name")
 You may use the `SetAsDateTime` method to format the column:
 
 ```csharp
-new TextColumn("last_update")
+Make<TextColumn>("last_update")
     .SetAsDateTime("yyyy-MM-dd HH:mm:ss")
 ```
 
 You may use the `SetAsTimeAgo()` method to format the column to be a string showing how long ago a DateTime was, for example `4 minutes ago`:
 
 ```csharp
-new TextColumn("last_update")
+Make<TextColumn>("last_update")
     .SetAsDateTime()
     .SetAsTimeAgo()
 ```
@@ -49,7 +49,7 @@ new TextColumn("last_update")
 The `SetAsCurrency` method allows you to easily format monetary values, in any currency.:
 
 ```csharp
-new TextColumn("rental_rate")
+Make<TextColumn>("rental_rate")
     .SetAsCurrency("eur")
 ```
 
@@ -58,7 +58,7 @@ new TextColumn("rental_rate")
 You may `SetLimit()` the length of the cell's value:
 
 ```csharp
-new TextColumn("description")
+Make<TextColumn>("description")
     .SetLimit(50)
 ```
 
@@ -67,7 +67,7 @@ new TextColumn("description")
 You may limit the number of `SetWordsCount()` displayed in the cell:
 
 ```csharp
-new TextColumn("description")
+Make<TextColumn>("description")
     .SetLimit(10)
 ```
 
@@ -76,7 +76,7 @@ new TextColumn("description")
 If your column value is HTML, you may render it using `SetAsHtml()`:
 
 ```csharp
-new TextColumn("description")
+Make<TextColumn>("description")
     .SetAsHtml()
 ```
 
@@ -85,7 +85,7 @@ new TextColumn("description")
 You may instead pass a custom formatting callback to `SetFormatUsing()`, which accepts the `record` of the cell:
 
 ```csharp
-new TextColumn("description")
+Make<TextColumn>("description")
     .SetFormatUsing(record => $"<p class='text-gray-500'>{record["description"]}</p>")
 ```
 
@@ -94,7 +94,7 @@ new TextColumn("description")
 You may set a color for the text, either `primary`, `secondary`, `success`, `warning` or `danger`:
 
 ```csharp
-new TextColumn("status")
+Make<TextColumn>("status")
     .SetColor("primary")
 ```
 
@@ -103,7 +103,7 @@ new TextColumn("status")
 Text columns may also have an icon, You may set the position of an icon using:
 
 ```csharp
-new TextColumn("email")
+Make<TextColumn>("email")
     .SetIcon("pi pi-mail", "after"), // after or before
 ```
 
@@ -112,7 +112,7 @@ new TextColumn("email")
 You may make the text smaller or bigger using [`SetSize(SizeTypes)`](~/api/AbanoubNassem.Trinity.Components.TrinityColumn.SizeTypes.yml):
 
 ```csharp
-new TextColumn("title")
+Make<TextColumn>("title")
     SetSize(SizeTypes.Xl)
 ```
 
@@ -123,7 +123,7 @@ Text columns have regular font weight by default but you may change this to any 
 For instance, you may make the font bold using `SetWeight("font-bold")`:
 
 ```csharp
-new TextColumn("title")
+Make<TextColumn>("title")
     SetWeight("font-bold")
 ```
 
@@ -134,6 +134,6 @@ You can change the text font family.
 For instance, you may make the font mono using `SetFontFamily("mono")`:
 
 ```csharp
-new TextColumn("title")
+Make<TextColumn>("title")
     SetFontFamily("mono")
 ```

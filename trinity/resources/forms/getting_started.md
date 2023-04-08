@@ -1,13 +1,16 @@
 ---
 title: Forms
 ---
+
 # Forms
 
-Resource classes contain a [TrinityForm](~/api/AbanoubNassem.Trinity.Components.TrinityForm.yml) property that is used to build the form on the create and update pages.
+Resource classes contain a [TrinityForm](~/api/AbanoubNassem.Trinity.Components.TrinityForm.yml) property that is used
+to build the form on the create and update pages.
+
 ```csharp
 protected override TrinityForm GetTrinityForm()
     {
-        return new TrinityForm()
+        return Make<TrinityForm>()
             .SetSchema(new List<IFormComponent>
             {
                 // fields
@@ -39,21 +42,26 @@ order they should appear in your form.
 
 You may also build your own completely custom form fields.
 
+> [!NOTE]
+> Fields may be created using the resource/page `Make<>` method, passing to it the name of the column, followed by any arguments the field requires.
+
 ## Setting a label
 
-By default, the label of the field will be automatically determined based on its name. To override the field's label, you may use the `SetLabel()` method. Customizing the label in this way is useful.
+By default, the label of the field will be automatically determined based on its name. To override the field's label,
+you may use the `SetLabel()` method. Customizing the label in this way is useful.
 
 ```csharp
-new DateTimeField("release_year")
+Make<DateTimeField>("release_year")
     .SetLabel("Year")
 ```
 
 ## Setting an ID
 
-In the same way as labels, field IDs are also automatically determined. To override a field ID, use the `SetId()` method:
+In the same way as labels, field IDs are also automatically determined. To override a field ID, use the `SetId()`
+method:
 
 ```csharp
-new DateTimeField("release_year")
+Make<DateTimeField>("release_year")
     .SetId("Year-Id")
 ```
 
@@ -62,27 +70,29 @@ new DateTimeField("release_year")
 Fields may have a default value. To define a default value, use the `SetDefault()` method:
 
 ```csharp
-new SwitchInputField("active")
+Make<SwitchInputField>("active")
     .SetDefaultValue(true)
 ```
+
 > [!NOTE]
 > This only works on Create Pages, as Edit/Update Pages will always fill the data from the database record.
 
 ## Helper messages and tooltips
 
-Sometimes, you may wish to provide extra information for the user of the form. For this purpose, you may use helper messages and tooltips.
+Sometimes, you may wish to provide extra information for the user of the form. For this purpose, you may use helper
+messages and tooltips.
 
 Help messages are displayed below the field.
 
 ```csharp
-new TextField("first_name")
+Make<TextField>("first_name")
     .SetHelperText("This where you enter your first name!")
 ```
 
 Tooltips can be used to display text above the field when selected:
 
 ```csharp
-new TextField("last_name")
+Make<TextField>("last_name")
     .SetTooltip("This where you enter your last name!"),
 ```
 
@@ -91,7 +101,7 @@ new TextField("last_name")
 The HTML attributes of the field's wrapper can be customized by passing an array of `SetExtraAttributes()`:
 
 ```csharp
-new TextField("first_name")
+Make<TextField>("first_name")
     .SetExtraAttributes(new Dictionary<string, string>()
     {
         { "class", "bg-gray-200" }
@@ -101,7 +111,7 @@ new TextField("first_name")
 To add additional HTML attributes to the input itself, use `SetExtraInputAttributes()`:
 
 ```csharp
-new TextField("first_name")
+Make<TextField>("first_name")
     .SetExtraInputAttributes(new Dictionary<string, string>()
     {
         { "class", "bg-gray-200" }
@@ -113,24 +123,25 @@ new TextField("first_name")
 You may disable a field to prevent it from being edited:
 
 ```csharp
-new TextField("first_name")
+Make<TextField>("first_name")
     .SetAsDisabled()
 ```
 
 Optionally, you may pass a boolean value to control if the field should be disabled or not:
 
 ```csharp
-new TextField("first_name")
+Make<TextField>("first_name")
     .SetAsDisabled(!User.IsTrinityAdmin())
 ```
 
 > [!CAUTION]
-> Please note that disabling a field does not prevent it from being saved, and a skillful user could manipulate the HTML of the page and alter its value.
+> Please note that disabling a field does not prevent it from being saved, and a skillful user could manipulate the HTML
+> of the page and alter its value.
 
 To prevent a field from being saved, use the `SetIsSavable(false)` method:
 
 ```csharp
-new TextField("first_name")
+Make<TextField>("first_name")
     .SetAsDisabled()
     .SetIsSavable(false)
 ```
@@ -140,32 +151,34 @@ new TextField("first_name")
 You may hide a field:
 
 ```csharp
-new TextField("first_name")
+Make<TextField>("first_name")
     .SetAsHidden()
 ```
 
 Optionally, you may pass a boolean value to control if the field should be hidden or not:
 
 ```csharp
-new TextField("first_name")
+Make<TextField>("first_name")
     .SetAsHidden(!User.IsTrinityAdmin())
 ```
 
 ## Setting a placeholder
 
-Many fields will also include a placeholder value for when it has no value. You may customize this using the `SetPlaceholder()` method:
+Many fields will also include a placeholder value for when it has no value. You may customize this using
+the `SetPlaceholder()` method:
 
 ```csharp
-new TextField("first_name")
+Make<TextField>("first_name")
     .SetPlaceholder("Doe")
 ```
 
 ## Setting html input type
 
-You may use the `SetInputType()` method to pass another [HTML input type](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input#input_types):
+You may use the `SetInputType()` method to pass
+another [HTML input type](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input#input_types):
 
 ```csharp
-new TextField("email")
+Make<TextField>("email")
     .SetInputType("email")
 ```
 
@@ -175,8 +188,9 @@ You may set the field as required which will show a red asterisk (*) next to the
 
 > [!NOTE]
 > This will only add the HTML validation, not actually checking it on the server.
+
 ```csharp
-new TextField("first_name")
+Make<TextField>("first_name")
     .SetAsRequired()
 ```
 
@@ -185,7 +199,7 @@ new TextField("first_name")
 You may place text before and after the input using the `SetPrefixes()` and `SetSuffixes()` methods:
 
 ```csharp
-new TextField("domain")
+Make<TextField>("domain")
     .SetLabel("Domain")
     .SetPrefixes("https://")
     .SetSuffixes(".com")
@@ -196,7 +210,7 @@ new TextField("domain")
 You may place a icon before and after the input using the `SetPrefixIcons()` and `SetSuffixIcons()` methods:
 
 ```csharp
-new TextField("domain")
+Make<TextField>("domain")
     .SetLabel("Domain")
     .SetPrefixIcons("pi pi-link")
     .SetPrefixes("https://")

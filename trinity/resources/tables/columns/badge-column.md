@@ -5,7 +5,7 @@ title: Badge column
 Badge columns render a colored badge with the cell's contents:
 
 ```csharp
-new BadgeColumn('status')
+Make<BadgeColumn>('status')
     .SetOptions(
         ("draft", "Draft"),
         ("reviewing", "Reviewing"),
@@ -18,7 +18,7 @@ new BadgeColumn('status')
 Badges may have a color. It can be one of [BadgeSeverityType](~/api/AbanoubNassem.Trinity.Columns.BadgeSeverityType.yml):
 
 ```csharp
-new BadgeColumn('status')   
+Make<BadgeColumn>('status')   
     .SetOptions(
         ("draft", "Draft", BadgeSeverityType.Info),
         ("reviewing", "Reviewing", BadgeSeverityType.Success),
@@ -31,7 +31,7 @@ new BadgeColumn('status')
 Badges may also have an icon:
 
 ```csharp
-new BadgeColumn('status')   
+Make<BadgeColumn>('status')   
     .SetOptions(
          ("draft", "Draft", BadgeSeverityType.Info, ""),
          ("reviewing", "Reviewing", BadgeSeverityType.Success, "pi pi-refresh"),
@@ -44,6 +44,6 @@ new BadgeColumn('status')
 you may change the badge size. It can be one of [BadgeSizeType](~/api/AbanoubNassem.Trinity.Columns.BadgeSizeType.yml):
 
 ```csharp
-new BadgeColumn('status')   
+Make<BadgeColumn>('status')   
     .SetSize(BadgeSizeType.XLarge)
 ```

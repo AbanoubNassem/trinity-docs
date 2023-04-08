@@ -12,7 +12,7 @@ to build the table on the listing page.
 ```csharp
 protected override TrinityTable GetTrinityTable()
     {
-        return new TrinityTable()
+        return Make<TrinityTable>()
             .SetColumns(new List<ITrinityColumn>()
             {
                 // ...
@@ -54,6 +54,9 @@ order they should appear in your table.
 
 You may also build your own completely custom table columns.
 
+> [!NOTE]
+> Columns may be created using the resource/page `Make<>` method, passing to it the name of the column, followed by any arguments the field requires.
+
 ## Filters
 
 `Trinity` filters are any form field that allow you to scope your `Trinity` index queries with custom conditions.
@@ -65,11 +68,11 @@ you can simply change that:
 > Setting any column as searchable , will make the `Column` filterable.
 
 ```csharp
-new TextColumn("first_name")
+Make<TextColumn>("first_name")
         .SetAsSearchable() // default Text input field
         
-new TextColumn("first_name")
-        .SetCustomFilter(new EditorField("test"),
+Make<TextColumn>("first_name")
+        .SetCustomFilter(Make<EditorField>("test"),
                 (query, str) =>
                 {
                     query.WhereStarts("t.first_name", str);
@@ -86,18 +89,17 @@ record in the table.
 
 To add actions to a table, use the `TrinityTable.SetActions()` method:
 
-
 ```csharp
 protected override TrinityTable GetTrinityTable()
     {
-        return new TrinityTable()
+        return Make<TrinityTable>()
             .SetColumns(new List<ITrinityColumn>()
             {
                 // ...
             })
             .SetActions(new List<ITrinityAction>()
             {
-                new TrinityAction("View")
+                Make<TrinityAction>("View")
                     .SetSeverity(ActionSeverity.Help)
                     .SetLabel("View")
                     .SetIcon("pi pi-eye")
@@ -108,21 +110,23 @@ protected override TrinityTable GetTrinityTable()
 
 ## Bulk actions
 
-[Bulk actions](../actions#bulk-actions) are buttons that are rendered in the header of the table. They appear when you select records using the checkboxes at the start of each table row. They allow the user to perform a task on multiple records at once in the table.
+[Bulk actions](../actions#bulk-actions) are buttons that are rendered in the header of the table. They appear when you
+select records using the checkboxes at the start of each table row. They allow the user to perform a task on multiple
+records at once in the table.
 
 To add bulk actions, use the `TrinityTable.SetBulkActions()` method:
 
 ```csharp
 protected override TrinityTable GetTrinityTable()
     {
-        return new TrinityTable()
+        return Make<TrinityTable>()
             .SetColumns(new List<ITrinityColumn>()
             {
                 // ...
             })
             .SetBulkActions(new List<ITrinityAction>()
             {
-                new TrinityAction("download")
+                Make<TrinityAction>("download")
                     .SetLabel("Download")
                     .SetSeverity(ActionSeverity.Info)
                     .SetIcon("pi pi-download")

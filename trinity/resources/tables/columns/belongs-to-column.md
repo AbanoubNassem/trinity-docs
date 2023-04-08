@@ -6,7 +6,7 @@ title: Belongs To column
 
 you can use the simple constructor:
 ```csharp
-new BelongsToColumn(
+Make<BelongsToColumn>(
         columnName: "language_id", 
         foreignColumnToSelect: "name", 
         foreignTable: "language"
@@ -18,7 +18,7 @@ In this example, `Trinity` will assume that the foreign column is `language_id`,
 more controlled example:
 
 ```csharp
-new BelongsToColumn(
+Make<BelongsToColumn>(
         localColumnName: "language_id",
         relationTable: "language",
         foreignColumnName: "language_id",
@@ -36,7 +36,7 @@ You may use "dot syntax" to access nested columns within relationships.
 Assuming we have a `warehouse` table , that has a relation with `store` table on `store_id`, and the `store` table has relationship with `staff` table,  we can select the `store` manager's `first_name`. 
 
 ```csharp
-new BelongsToColumn(
+Make<BelongsToColumn>(
         localColumnNames: "store_id.manager_staff_id",
         relationTables: "store.staff",
         foreignColumnName: "store_id.staff_id",

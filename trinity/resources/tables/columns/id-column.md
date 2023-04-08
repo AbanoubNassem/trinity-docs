@@ -7,12 +7,12 @@ IdColumn displays an identifier value:
 usually it's:
 
 ```csharp
- new IdColumn(PrimaryKeyColumn)
+ Make<IdColumn>(PrimaryKeyColumn)
 ```
 
 but it can be any column:
 ```csharp
- new IdColumn("some_id")
+ Make<IdColumn>("some_id")
 ```
 
 IdColumn is toggleable by default , which means it's hidden by default.

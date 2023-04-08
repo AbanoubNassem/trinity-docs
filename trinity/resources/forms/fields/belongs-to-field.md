@@ -6,7 +6,7 @@ title: BelongsToField
 You may use the `BlenogsToField` to show html `<select/>` and configure a `BelongsTo` relationship to automatically retrieve and save options from:
 
 ```csharp
-new BelongsToField(
+Make<BelongsToField>(
    columnName: "address_id", 
    foreignColumnToSelect: "address", 
    foreignTable: "address"
@@ -18,7 +18,7 @@ In this example, `Trinity` will assume that the foreign column is `address_id`, 
 more controlled example:
 
 ```csharp
-new BelongsToField(
+Make<BelongsToField>(
         localColumnName: "address_id",
         relationTable: "address",
         foreignColumnName: "address_id",
@@ -36,7 +36,7 @@ You may use "dot syntax" to access nested columns within relationships.
 Assuming we have a `warehouse` table , that has a relation with `store` table on `store_id`, and the `store` table has relationship with `staff` table,  we can select the `store` manager's `first_name`.
 
 ```csharp
-new BelongsToField(
+Make<BelongsToField>(
         localColumnNames: "store_id.manager_staff_id",
         relationTables: "store.staff",
         foreignColumnName: "store_id.staff_id",

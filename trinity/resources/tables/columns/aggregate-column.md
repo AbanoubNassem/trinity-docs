@@ -8,7 +8,7 @@ title: AggregateColumn
 If you wish to count the number of related records in a column, you may use the `Counts()` method:
 
 ```csharp
-new AggregateColumn("user_id")
+Make<AggregateColumn>("user_id")
     .Counts(
         foreignKeyColumn: "id", 
         foreignTable: "users" 
@@ -22,7 +22,7 @@ In this example, `users` is the name of the table to count from. where the `user
 `Trinity` provides several methods for aggregating a relationship column, including `Average()`, `Max()`, `Min()` and `Sum()`. For instance, if you wish to show the average of a column on all related records in a table, you may use the `Average()` method:
 
 ```csharp
-new AggregateColumn("user_id")
+Make<AggregateColumn>("user_id")
     .Average(
         foreignKeyColumn: "id", 
         foreignTable: "users",
