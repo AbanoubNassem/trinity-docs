@@ -84,7 +84,7 @@ Make<TextColumn>("first_name")
 
 ## Actions
 
-[Actions](../actions) are buttons that are rendered at the end of table rows. They allow the user to perform a task on a
+[Actions](./actions.md#single-actions) are buttons that are rendered at the end of table rows. They allow the user to perform a task on a
 record in the table.
 
 To add actions to a table, use the `TrinityTable.SetActions()` method:
@@ -110,7 +110,7 @@ protected override TrinityTable GetTrinityTable()
 
 ## Bulk actions
 
-[Bulk actions](../actions#bulk-actions) are buttons that are rendered in the header of the table. They appear when you
+[Bulk actions](./actions.md#bulk-actions) are buttons that are rendered in the header of the table. They appear when you
 select records using the checkboxes at the start of each table row. They allow the user to perform a task on multiple
 records at once in the table.
 
