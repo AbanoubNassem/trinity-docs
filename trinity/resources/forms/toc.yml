@@ -3,3 +3,6 @@
   
 - name: Fields
   href: ./fields/toc.yml
+
+- name: Layouts
+  href: ./layouts.md
