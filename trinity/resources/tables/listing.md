@@ -55,7 +55,7 @@ order they should appear in your table.
 You may also build your own completely custom table columns.
 
 > [!NOTE]
-> Columns may be created using the resource/page `Make<>` method, passing to it the name of the column, followed by any arguments the field requires.
+> Columns may be created using the `Make<>` method, passing to it the name of the column, followed by any arguments the column requires.
 
 ## Filters
 

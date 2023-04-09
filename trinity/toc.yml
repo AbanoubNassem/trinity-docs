@@ -12,4 +12,9 @@
   
 - name: Resources
   href: ./resources/toc.yml
-  expanded: true
+  
+- name: Widgets
+  href: ./widgets/toc.yml
+  
+- name: Pages
+  href: ./pages.md

@@ -84,8 +84,6 @@ Make<FileUploadField>("image")
 You may also alter the general appearance of the Filepond component. Available options for these methods are available on the [Filepond website](https://pqina.nl/filepond/docs/api/instance/properties/#styles).
 
 ```csharp
-use Filament\Forms\Components\FileUpload;
-
 Make<FileUploadField>('attachment')
     .SetImagePreviewHeight('250')
     .SetLoadIndicatorPosition('left')

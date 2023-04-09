@@ -9,7 +9,9 @@
   
 - name: Tables
   href: ./tables/toc.yml
+  expanded: true
   
 - name: Forms
   href: ./forms/toc.yml
+  expanded: true
   

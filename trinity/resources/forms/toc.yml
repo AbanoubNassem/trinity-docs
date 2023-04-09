@@ -6,3 +6,6 @@
 
 - name: Layouts
   href: ./layouts.md
+  
+- name: Validations
+  href: ./validations.md
