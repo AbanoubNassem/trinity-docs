@@ -70,16 +70,23 @@
       "_appLogoPath": "./images/logo.png",
       "_appFaviconPath": "./images/favicon.ico",
       "_enableSearch": true,
-      "rootNamespace": "Trinity"
-    },
-    "watch": {
-      "files": [
-        "**/*.md",
-        "**/*.cs"
-      ],
-      "exclude": [
-        "**/bin/**",
-        "**/obj/**"
+      "rootNamespace": "Trinity",
+      "_description": "Trinity is a feature-rich and beautifully-designed Single-Page Application (SPA) administration tool built using C# and ASP.NET. It is designed to streamline common administrative tasks and enhance the productivity of developers, making it easy to manage your website's backend with ease.",
+      "_keywords": [
+        "trinity",
+        "admin panel",
+        "administration tool",
+        "C#",
+        "ASP.NET",
+        "Dapper",
+        "SqlKata",
+        "FluentValidation",
+        "MiniProfiler",
+        "ReactJS",
+        "PrimeReact",
+        "InertiaJS",
+        "Vite",
+        "SPA"
       ]
     },
     "sitemap": {
