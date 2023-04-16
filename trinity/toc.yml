@@ -1,3 +1,6 @@
+- name: Demo
+  href: demo.md
+  
 - name: Installation
   href: installation.md
 
