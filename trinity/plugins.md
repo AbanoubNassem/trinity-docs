@@ -90,7 +90,7 @@ You can change the page `slug` by overriding the property `Slug`.
 
 ### Data
 
-You can pass any data to the page `slug` by overriding the `GetData()` method.
+You can pass any data to the page by overriding the `GetData()` method.
 
 ```csharp
 public override object GetData()

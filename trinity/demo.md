@@ -8,6 +8,8 @@ title: Demo
 
 To access the demo, please visit the following URL: [Trinity Demo](https://trinity-demo.abanoubnassem.com/admin/)
 
+To access the demo source code, please visit the following URL: [Trinity Demo Source Code](https://github.com/AbanoubNassem/TrinityDemo)
+
 ## Accessing Admin Role
 
 To access the admin panel, please use the following login credentials:
